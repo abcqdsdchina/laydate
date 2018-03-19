@@ -1262,6 +1262,7 @@
 
         that.setBtnStatus(); //同步按钮可点状态
         options.range || that.done(null, 'change');
+        options.type == 'month' && type != 'year' && that.setValue(that.parse()).remove().done(); //c_qiancheng
         lay(that.footer).find(ELEM_TIME_BTN).removeClass(DISABLED);
       });
     } else {
